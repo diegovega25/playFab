@@ -17,7 +17,7 @@ namespace Code
             Please change the titleId below to your own titleId from PlayFab Game Manager.
             If you have already set the value in the Editor Extensions, this can be skipped.
             */
-                PlayFabSettings.staticSettings.TitleId = "86378";
+                PlayFabSettings.staticSettings.TitleId = "AACE9";
             }
 
             var request = new LoginWithCustomIDRequest {CustomId = "GettingStartedGuide", CreateAccount = true};
@@ -48,7 +48,7 @@ namespace Code
         }
 
         private void InitializeUser(){
-            
+            Debug.Log("jeje");
             /**************************************************************Test para obtener data**************************************************************************/
             GetTitleDataRequest request = new GetTitleDataRequest
             {
@@ -57,7 +57,7 @@ namespace Code
             PlayFabClientAPI.GetTitleData(request, dataResult =>
                  {
                 // Debug.Log(dataResult.Data["InitialUserData"]);
-                var data = dataResult.Data["InitialUserData"];
+                 var data = dataResult.Data["InitialUserData"];
                  var initialUserData = JsonUtility.FromJson<InitialUserData>(data);
                   
                  PlayFabClientAPI.AddUserVirtualCurrency(new AddUserVirtualCurrencyRequest {

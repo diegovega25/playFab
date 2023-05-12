@@ -35,8 +35,6 @@ namespace Code.CloudScripts
                 }
             };
             PlayFabClientAPI.ExecuteCloudScript(request, OnExecuteSuccess, OnError);
-
-
         }
 
         private void OnError(PlayFabError obj)
